@@ -13,20 +13,82 @@
     tools:context="com.vel.dar.her.tododeportes.MainActivity"
     tools:showIn="@layout/activity_main">
 
-    <TextView
-        android:id="@+id/tvSaludo"
-        android:layout_width="wrap_content"
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="0dp">
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/relative"
-        android:background="@color/colorAccent"
+        android:orientation="vertical"
+        android:layout_margin="0dp">
 
-        android:text="@string/saludo" />
+        <TextView
+            android:id="@+id/tvSaludo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+                        android:layout_centerHorizontal="true"
+            android:layout_below="@+id/relative"
+            android:textColor="@color/colorAccent"
+            android:elevation="20dp"
+            android:textAlignment="center"
+            android:textSize="25dp"
+            android:text="@string/saludo" />
 
-    <TextView
-        android:id="@+id/descripcion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tvSaludo"
-        android:background="@color/colorAccent"
-        android:text="@string/descripcionApp" />
+        <TextView
+            android:id="@+id/descripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/tvSaludo"
+            android:textColor="@color/colorAccent"
+            android:textAlignment="center"
+            android:textSize="18dp"
+            android:text="@string/descripcionApp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hola mundo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hola mundo"/>
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hola mundo"/>
+
+        </LinearLayout>
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola mundo"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola mundo"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola mundo"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola mundo"/>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola mundo"/>
+
+
+    </LinearLayout>
+
+</ScrollView>
+
 </RelativeLayout>
