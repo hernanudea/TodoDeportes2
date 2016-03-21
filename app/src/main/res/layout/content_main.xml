@@ -10,10 +10,12 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    android:background="@color/colorPrimaryLing"
     tools:context="com.vel.dar.her.tododeportes.MainActivity"
     tools:showIn="@layout/activity_main">
 
 <ScrollView
+    android:id="@+id/scrol"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="0dp">
@@ -27,7 +29,7 @@
             android:id="@+id/tvSaludo"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-                        android:layout_centerHorizontal="true"
+            android:layout_centerHorizontal="true"
             android:layout_below="@+id/relative"
             android:textColor="@color/colorAccent"
             android:elevation="20dp"
@@ -50,10 +52,6 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:orientation="horizontal">
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo"/>
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
@@ -85,10 +83,24 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text="Hola mundo"/>
-
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Hola mundo"/>
+        <ToggleButton
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Hacerse Administrador"/>
 
     </LinearLayout>
-
 </ScrollView>
 
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/autor"
+        android:textColor="@color/colorAccent"
+        android:layout_below="@id/scrol"
+        android:layout_alignParentRight="true"
+        android:textSize="12dp"/>
 </RelativeLayout>
