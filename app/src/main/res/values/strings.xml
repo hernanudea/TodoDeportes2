@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">Todo Deportes</string>
+    <string name="action_settings">Configurar</string>
+    <string name="saludo">Bienvenido a TodoDeportes</string>
+    <string name="descripcionApp">Aquí podrás alquilar las mejores canchas!</string>
+    <string name="version">0.3.1</string>
+
+    <!--ACTIVITY MAIN-->
+
+</resources>
