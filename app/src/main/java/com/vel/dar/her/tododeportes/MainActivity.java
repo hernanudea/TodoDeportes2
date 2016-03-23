@@ -8,8 +8,14 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.CompoundButton;
+import android.widget.LinearLayout;
+import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
+    LinearLayout fila02;
+    LinearLayout fila03;
+    ToggleButton toggleButton;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +32,20 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
+        fila02 = (LinearLayout) findViewById(R.id.fila02);
+        fila03 = (LinearLayout) findViewById(R.id.fila03);
+        toggleButton = (ToggleButton) findViewById(R.id.tbCambioperfil);
+
+        toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if (isChecked) {
+                    viewAdministrador();
+                } else {
+                    viewUsuario();
+                }
+            }
+        });
     }
 
     @Override
@@ -48,5 +68,15 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    public void viewAdministrador() {
+        fila02.setVisibility(View.VISIBLE);
+        //fila03.setLayout
+    }
+
+    public void viewUsuario() {
+        fila02.setVisibility(View.INVISIBLE);
+        //fila03.setLayout
     }
 }

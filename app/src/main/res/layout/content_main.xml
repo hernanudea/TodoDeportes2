@@ -3,9 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/relative"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/colorPrimaryLing"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
     android:paddingBottom="@dimen/activity_vertical_margin"
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
@@ -18,109 +17,168 @@
         android:id="@+id/scrol"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="0dp">
+        android:layout_margin="0dp"
+        android:background="@color/colorPrimaryLing">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_margin="0dp"
-            android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
 
-            <TextView
-                android:id="@+id/tvSaludo"
+            <!--PRIMERA FILA DE TEXTVIEW-->
+            <LinearLayout
+                android:id="@+id/fila01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/relative"
-                android:layout_centerHorizontal="true"
-                android:elevation="20dp"
-                android:text="@string/saludo"
-                android:textAlignment="center"
-                android:textColor="@color/colorAccent"
-                android:textSize="25dp" />
+                android:orientation="vertical">
 
-            <TextView
-                android:id="@+id/descripcion"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/tvSaludo"
-                android:layout_centerHorizontal="true"
-                android:text="@string/descripcionApp"
-                android:textAlignment="center"
-                android:textColor="@color/colorAccent"
-                android:textSize="18dp" />
+                <TextView
+                    android:id="@+id/tvSaludo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_centerHorizontal="true"
+                    android:elevation="20dp"
+                    android:text="@string/saludo"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="25dp" />
+
+                <TextView
+                    android:id="@+id/descripcion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tvSaludo"
+                    android:layout_centerHorizontal="true"
+                    android:text="@string/descripcionApp"
+                    android:textAlignment="center"
+                    android:textColor="@color/colorAccent"
+                    android:textSize="18dp" />
+            </LinearLayout>
+
+
+            <!--SEGUNDA FILA. PRIMEROS BOTONES-->
 
             <LinearLayout
-                android:layout_width="wrap_content"
+                android:id="@+id/fila02"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/fila01"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hola mundo1" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hola mundo1" />
+
+            </LinearLayout>
+
+            <!--TERCERA FILA. SEGUNDOS BOTONES-->
+            <LinearLayout
+                android:id="@+id/fila03"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fila02"
+                android:gravity="center"
+                android:visibility="visible"
                 android:orientation="horizontal">
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hola mundo" />
+                    android:text="Hola mundo2" />
 
                 <Button
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="Hola mundo" />
+                    android:text="Hola mundo2" />
 
             </LinearLayout>
 
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo" />
-
-            <Button
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Hola mundo" />
-
-            <ToggleButton
+            <!--CUARTA FILA. TERCEROS BOTONES-->
+            <LinearLayout
+                android:id="@+id/fila04"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Hacerse Administrador" />
+                android:layout_below="@+id/fila03"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-        </LinearLayout>
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hola mundo3" />
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hola mundo3" />
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/fila05"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/fila04"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/fila06"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fila05"
+                android:gravity="center">
+
+                <ToggleButton
+                    android:id="@+id/tbCambioperfil"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textOff="Administrador"
+                    android:textOn="Usuario" />
+            </LinearLayout>
+
+            <View
+                android:id="@+id/fila07"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/fila06"
+                android:background="@android:color/darker_gray" />
+
+
+            <LinearLayout
+                android:id="@+id/fila08"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/fila07"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/autor"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/scrol"
+                    android:layout_gravity="end"
+                    android:text="@string/autor"
+                    android:textSize="12dp" />
+
+                <TextView
+                    android:id="@+id/version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_below="@id/autor"
+                    android:layout_gravity="end"
+                    android:text="@string/version"
+                    android:textSize="12dp" />
+
+            </LinearLayout>
+        </RelativeLayout>
     </ScrollView>
-
-    <TextView
-        android:id="@+id/autor"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/scrol"
-        android:text="@string/autor"
-        android:textColor="@color/colorAccent"
-        android:textSize="12dp" />
-
-    <TextView
-        android:id="@+id/version"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentRight="true"
-        android:layout_below="@id/autor"
-        android:text="@string/version"
-        android:textColor="@color/colorAccent"
-        android:textSize="12dp" />
 </RelativeLayout>
