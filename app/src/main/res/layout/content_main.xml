@@ -99,18 +99,28 @@
             <ToggleButton
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:textOn="Usuario"
-                android:textOff="Administrador"/>
+                android:text="Hacerse Administrador" />
 
         </LinearLayout>
     </ScrollView>
 
     <TextView
+        android:id="@+id/autor"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentRight="true"
         android:layout_below="@id/scrol"
         android:text="@string/autor"
+        android:textColor="@color/colorAccent"
+        android:textSize="12dp" />
+
+    <TextView
+        android:id="@+id/version"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/autor"
+        android:text="@string/version"
         android:textColor="@color/colorAccent"
         android:textSize="12dp" />
 </RelativeLayout>
