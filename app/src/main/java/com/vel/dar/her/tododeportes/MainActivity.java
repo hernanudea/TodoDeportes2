@@ -10,6 +10,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.CompoundButton;
 import android.widget.LinearLayout;
+import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
@@ -72,11 +73,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void viewAdministrador() {
         fila02.setVisibility(View.VISIBLE);
-        //fila03.setLayout
+        fila02.getLayoutParams().width = fila03.getWidth();
+        fila02.getLayoutParams().height = fila03.getHeight();
+        Toast.makeText(getApplicationContext(), "Vista de Administrador", Toast.LENGTH_SHORT).show();
     }
 
     public void viewUsuario() {
         fila02.setVisibility(View.INVISIBLE);
-        //fila03.setLayout
+        fila02.getLayoutParams().width = 0;
+        fila02.getLayoutParams().height = 0;
+        Toast.makeText(getApplicationContext(), "Vista de Usuario", Toast.LENGTH_SHORT).show();
     }
 }
