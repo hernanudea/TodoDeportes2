@@ -10,10 +10,13 @@
     <string name="iniciaSeccion">Iniciar Sección</string>
     <string name="registrarse">Registrarse</string>
 
+    <!--MainActivity-->
+    <string name="vistaAdministrador">Vista Administrador</string>
+    <string name="vistaUsuario">Vista Usuario</string>
+
+
     <!--
-    <string name="XXX">XXX</string>
-    <string name="XXX">XXX</string>
-    <string name="XXX">XXX</string>
+     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>

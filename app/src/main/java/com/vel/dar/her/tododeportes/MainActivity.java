@@ -14,8 +14,8 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 public class MainActivity extends AppCompatActivity {
-    LinearLayout fila02;
-    LinearLayout fila03;
+    LinearLayout fila05;
+    LinearLayout fila06;
     ToggleButton toggleButton;
 
     @Override
@@ -33,8 +33,8 @@ public class MainActivity extends AppCompatActivity {
 //                        .setAction("Action", null).show();
 //            }
 //        });
-        fila02 = (LinearLayout) findViewById(R.id.fila02);
-        fila03 = (LinearLayout) findViewById(R.id.fila03);
+        fila05 = (LinearLayout) findViewById(R.id.fila05);
+        fila06 = (LinearLayout) findViewById(R.id.fila06);
         toggleButton = (ToggleButton) findViewById(R.id.tbCambioperfil);
 
         toggleButton.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
@@ -72,16 +72,16 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void viewAdministrador() {
-        fila02.setVisibility(View.VISIBLE);
-        fila02.getLayoutParams().width = fila03.getWidth();
-        fila02.getLayoutParams().height = fila03.getHeight();
-        Toast.makeText(getApplicationContext(), "Vista de Administrador", Toast.LENGTH_SHORT).show();
+        fila05.setVisibility(View.VISIBLE);
+        fila05.getLayoutParams().width = fila06.getWidth();
+        fila05.getLayoutParams().height = fila06.getHeight();
+        Toast.makeText(getApplicationContext(), R.string.vistaAdministrador, Toast.LENGTH_SHORT).show();
     }
 
     public void viewUsuario() {
-        fila02.setVisibility(View.INVISIBLE);
-        fila02.getLayoutParams().width = 0;
-        fila02.getLayoutParams().height = 0;
-        Toast.makeText(getApplicationContext(), "Vista de Usuario", Toast.LENGTH_SHORT).show();
+        fila05.setVisibility(View.INVISIBLE);
+        fila05.getLayoutParams().width = 0;
+        fila05.getLayoutParams().height = 0;
+        Toast.makeText(getApplicationContext(), R.string.vistaUsuario, Toast.LENGTH_SHORT).show();
     }
 }

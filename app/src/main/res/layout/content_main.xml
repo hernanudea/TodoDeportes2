@@ -54,14 +54,53 @@
                     android:textSize="18dp" />
             </LinearLayout>
 
+            <View
+                android:id="@+id/fila02"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/fila01"
+                android:background="@android:color/darker_gray" />
+
+            <LinearLayout
+                android:id="@+id/fila03"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@+id/fila02"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/iniciarSeccion"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="start"
+                    android:text="@string/iniciaSeccion" />
+
+                <TextView
+                    android:id="@+id/registro"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="right"
+                    android:gravity="right"
+                    android:text="@string/registrarse" />
+
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/fila04"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_below="@+id/fila03"
+                android:background="@android:color/darker_gray" />
+
 
             <!--SEGUNDA FILA. PRIMEROS BOTONES-->
 
             <LinearLayout
-                android:id="@+id/fila02"
+                android:id="@+id/fila05"
                 android:layout_width="0dp"
                 android:layout_height="0dp"
-                android:layout_below="@+id/fila01"
+                android:layout_below="@+id/fila04"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible">
@@ -80,13 +119,13 @@
 
             <!--TERCERA FILA. SEGUNDOS BOTONES-->
             <LinearLayout
-                android:id="@+id/fila03"
+                android:id="@+id/fila06"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fila02"
+                android:layout_below="@+id/fila05"
                 android:gravity="center"
-                android:visibility="visible"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:visibility="visible">
 
                 <Button
                     android:layout_width="wrap_content"
@@ -102,10 +141,10 @@
 
             <!--CUARTA FILA. TERCEROS BOTONES-->
             <LinearLayout
-                android:id="@+id/fila04"
+                android:id="@+id/fila07"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fila03"
+                android:layout_below="@+id/fila06"
                 android:gravity="center"
                 android:orientation="horizontal">
 
@@ -122,17 +161,17 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/fila05"
+                android:id="@+id/fila08"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/fila04"
+                android:layout_below="@+id/fila07"
                 android:background="@android:color/darker_gray" />
 
             <LinearLayout
-                android:id="@+id/fila06"
+                android:id="@+id/fila09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fila05"
+                android:layout_below="@+id/fila08"
                 android:gravity="center">
 
                 <ToggleButton
@@ -144,18 +183,18 @@
             </LinearLayout>
 
             <View
-                android:id="@+id/fila07"
+                android:id="@+id/fila10"
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:layout_below="@+id/fila06"
+                android:layout_below="@+id/fila09"
                 android:background="@android:color/darker_gray" />
 
 
             <LinearLayout
-                android:id="@+id/fila08"
+                android:id="@+id/fila11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_below="@+id/fila07"
+                android:layout_below="@+id/fila10"
                 android:orientation="vertical">
 
                 <TextView
