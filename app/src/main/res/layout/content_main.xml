@@ -21,7 +21,7 @@
         android:background="@color/colorPrimaryLing">
 
         <RelativeLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
             <!--PRIMERA FILA DE TEXTVIEW-->
@@ -29,6 +29,7 @@
                 android:id="@+id/fila01"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <TextView
@@ -66,6 +67,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_below="@+id/fila02"
+                android:layout_margin="10dp"
                 android:orientation="horizontal">
 
                 <TextView
@@ -101,19 +103,69 @@
                 android:layout_width="0dp"
                 android:layout_height="0dp"
                 android:layout_below="@+id/fila04"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
-                android:visibility="visible">
+                android:visibility="invisible">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hola mundo1" />
+                <android.support.v7.widget.CardView
+                    android:id="@+id/seccionAdministradores"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    app:cardUseCompatPadding="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hola mundo1" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryLing"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/football" />
+
+                    <TextView
+                        android:id="@+id/seccionCanchas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#8c000000"
+                        android:padding="10dp"
+                        android:text="@string/seccionCanchas"
+                        android:textAlignment="center"
+                        android:textColor="#ffe3e3e3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:id="@+id/SeccionSubtipoCancha"
+                    android:layout_width="128dp"
+                    android:layout_height="128dp"
+                    android:padding="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryLing"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/baseball" />
+
+                    <TextView
+                        android:id="@+id/seccionTipoCancha"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#8c000000"
+                        android:padding="10dp"
+                        android:text="@string/seccionSubtiposCanchas"
+                        android:textAlignment="center"
+                        android:textColor="#ffe3e3e3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
+
 
             </LinearLayout>
 
@@ -123,19 +175,69 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fila05"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:orientation="horizontal"
                 android:visibility="visible">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hola mundo2" />
+                <android.support.v7.widget.CardView
+                    android:id="@+id/seccionBusqueda"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="10dp"
+                    app:cardUseCompatPadding="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hola mundo2" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryLing"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/chinaz12" />
+
+                    <TextView
+                        android:id="@+id/busquedas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#8c000000"
+                        android:padding="10dp"
+                        android:text="@string/seccionBusquedas"
+                        android:textAlignment="center"
+                        android:textColor="#ffe3e3e3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+
+                    android:id="@+id/card2"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryLing"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/hockey" />
+
+                    <TextView
+                        android:id="@+id/seccionUsuarios"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#8c000000"
+                        android:padding="10dp"
+                        android:text="@string/seccionUsuarios"
+                        android:textAlignment="center"
+                        android:textColor="#ffe3e3e3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 
@@ -145,18 +247,68 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_below="@+id/fila06"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:orientation="horizontal">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hola mundo3" />
+                <android.support.v7.widget.CardView
+                    android:id="@+id/seccionReservas"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="10dp"
+                    app:cardUseCompatPadding="true">
 
-                <Button
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:text="Hola mundo3" />
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryLing"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/volleyball" />
+
+                    <TextView
+                        android:id="@+id/reservas"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#8c000000"
+                        android:padding="10dp"
+                        android:text="@string/seccionReservas"
+                        android:textAlignment="center"
+                        android:textColor="#ffe3e3e3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
+
+                <android.support.v7.widget.CardView
+
+                    android:id="@+id/SeccionPagos"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:padding="10dp"
+                    app:cardUseCompatPadding="true">
+
+                    <ImageView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/colorPrimaryLing"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/golf" />
+
+                    <TextView
+                        android:id="@+id/tvPagos"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:background="#8c000000"
+                        android:padding="10dp"
+                        android:text="@string/seccionPagos"
+                        android:textAlignment="center"
+                        android:textColor="#ffe3e3e3"
+                        android:textSize="12sp"
+                        android:textStyle="bold" />
+
+                </android.support.v7.widget.CardView>
 
             </LinearLayout>
 
@@ -171,13 +323,21 @@
                 android:id="@+id/fila09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_below="@+id/fila08"
-                android:gravity="center">
+                android:gravity="center"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cambiaVista" />
 
                 <ToggleButton
                     android:id="@+id/tbCambioperfil"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:textAlignment="center"
                     android:textOff="Administrador"
                     android:textOn="Usuario" />
             </LinearLayout>
@@ -194,6 +354,7 @@
                 android:id="@+id/fila11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_margin="10dp"
                 android:layout_below="@+id/fila10"
                 android:orientation="vertical">
 

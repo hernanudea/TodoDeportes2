@@ -3,20 +3,26 @@
     <string name="action_settings">Configurar</string>
     <string name="saludo">Bienvenido a Todo Deportes</string>
     <string name="descripcionApp">Aquí podrás alquilar las mejores canchas!</string>
-    <string name="version">v: 0.3.1</string>
+    <string name="version">v: 0.4.3</string>
     <string name="autor">by: Hernán Velásquez</string>
 
     <!--ACTIVITY MAIN-->
     <string name="iniciaSeccion">Iniciar Sección</string>
     <string name="registrarse">Registrarse</string>
+    <string name="cambiaVista">Cambiar de Vista</string>
 
     <!--MainActivity-->
     <string name="vistaAdministrador">Vista Administrador</string>
     <string name="vistaUsuario">Vista Usuario</string>
-
+    <string name="seccionCanchas">Canchas</string>
+    <string name="seccionSubtiposCanchas">Subtipo Canchas</string>
+    <string name="seccionBusquedas">Busquedas</string>
+    <string name="seccionUsuarios">Usuarios</string>
+    <string name="seccionReservas">Reservas</string>
+    <string name="seccionPagos">Pagos</string>
 
     <!--
-     <string name="XXX">XXX</string>
+
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
