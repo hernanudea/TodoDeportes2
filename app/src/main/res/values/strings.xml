@@ -1,17 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
 <resources>
+
     <string name="app_name">Todo Deportes</string>
     <string name="action_settings">Configurar</string>
     <string name="saludo">Bienvenido a Todo Deportes</string>
     <string name="descripcionApp">Aquí podrás alquilar las mejores canchas!</string>
     <string name="version">v: 0.4.4</string>
-    <string name="autor">by: Hernán Velásquez</string>
+    <string name="autor">by: Hernán Velásquez\n Giovani Cardona</string>
 
-    <!--ACTIVITY MAIN-->
+    <!-- ACTIVITY MAIN -->
     <string name="iniciaSeccion">Iniciar Sección</string>
     <string name="registrarse">Registrarse</string>
     <string name="cambiaVista">Cambiar de Vista</string>
 
-    <!--MainActivity-->
+    <!-- MainActivity -->
     <string name="vistaAdministrador">Vista Administrador</string>
     <string name="vistaUsuario">Vista Usuario</string>
     <string name="seccionCanchas">Canchas</string>
@@ -22,10 +24,28 @@
     <string name="seccionPagos">Pagos</string>
 
     <!--
-
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     -->
+
+    <string name="title_activity_registrar_cancha">Nueva Cancha</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="nombre_cancha">Nombre de la cancha</string>
+    <string name="titleRegistroCancha">Registrar Cancha</string>
+    <string name="saveCancha">Guardar Cancha</string>
+    <string name="hint_address">Dirección</string>
+
+    <string-array name="arrTipos">
+        <item >Elegir Tipo</item>
+        <item >Elegir Tipo</item>
+        <item >Elegir Tipo</item>
+
+    </string-array>
+
+    <string-array name="arrSubtipos">
+        <item >Elegir Subtipo</item>
+    </string-array>
+
 
 </resources>
