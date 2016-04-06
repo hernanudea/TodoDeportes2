@@ -1,4 +1,4 @@
-package com.vel.dar.her.tododeportes;
+package com.tododeportes.tododeportesapp;
 
 import android.app.Application;
 import android.test.ApplicationTestCase;

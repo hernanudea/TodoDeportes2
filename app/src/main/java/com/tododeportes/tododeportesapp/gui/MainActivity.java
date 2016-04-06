@@ -1,4 +1,4 @@
-package com.vel.dar.her.tododeportes;
+package com.tododeportes.tododeportesapp.gui;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.widget.CompoundButton;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 import android.widget.ToggleButton;
+
+import com.tododeportes.tododeportesapp.R;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout fila05;

@@ -5,7 +5,7 @@ android {
     buildToolsVersion '23.0.1'
 
     defaultConfig {
-        applicationId "com.vel.dar.her.tododeportes"
+        applicationId "com.tododeportes.tododeportesapp"
         minSdkVersion 15
         targetSdkVersion 23
         versionCode 1
