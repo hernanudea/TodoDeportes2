@@ -84,4 +84,13 @@ public class MainActivity extends AppCompatActivity {
         fila05.getLayoutParams().height = 0;
         Toast.makeText(getApplicationContext(), R.string.vistaUsuario, Toast.LENGTH_SHORT).show();
     }
+
+    public void seleccionSeccion(View v) {
+        switch (v.getId()) {
+            case R.id.seccionCanchas:
+                Toast.makeText(getApplicationContext(), "Canchas", Toast.LENGTH_SHORT).show();
+                break;
+
+        }
+    }
 }
