@@ -2,6 +2,7 @@ package com.tododeportes.tododeportesapp.gui;
 
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -10,7 +11,7 @@ import android.widget.Spinner;
 import com.tododeportes.tododeportesapp.R;
 
 
-public class RegistrarCanchaActivity extends ActionBarActivity {
+public class RegistrarCanchaActivity extends AppCompatActivity {
     private Spinner spnTipo;
     private Spinner spnSubtipo;
 

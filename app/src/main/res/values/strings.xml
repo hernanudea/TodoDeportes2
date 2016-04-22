@@ -6,7 +6,7 @@
     <string name="saludo">Bienvenido a Todo Deportes</string>
     <string name="descripcionApp">Aquí podrás alquilar las mejores canchas!</string>
     <string name="version">v: 0.4.4</string>
-    <string name="autor">by: Hernán Velásquez\n Giovani Cardona</string>
+    <string name="autor">by: Hernán Velásquez\nGiovani Cardona</string>
 
     <!-- ACTIVITY MAIN -->
     <string name="iniciaSeccion">Iniciar Sección</string>
@@ -37,14 +37,17 @@
     <string name="hint_address">Dirección</string>
 
     <string-array name="arrTipos">
-        <item >Elegir Tipo</item>
-        <item >Elegir Tipo</item>
-        <item >Elegir Tipo</item>
+        <item >Elegir Tipo 1</item>
+        <item >Elegir Tipo 2</item>
+        <item >Elegir Tipo 3</item>
 
     </string-array>
 
     <string-array name="arrSubtipos">
-        <item >Elegir Subtipo</item>
+        <item >Elegir SubtipoA </item>
+        <item >Elegir SubtipoB </item>
+        <item >Elegir SubtipoC </item>
+        <item >Elegir SubtipoD </item>
     </string-array>
 
 

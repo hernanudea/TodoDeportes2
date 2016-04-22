@@ -18,7 +18,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="0dp"
-        android:background="@color/colorPrimaryLing">
+        android:background="@color/colorPrimaryLight">
 
         <RelativeLayout
             android:layout_width="match_parent"
@@ -118,7 +118,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimaryLing"
+                        android:background="@color/colorPrimaryLight"
                         android:scaleType="centerCrop"
                         android:src="@drawable/football" />
 
@@ -149,7 +149,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimaryLing"
+                        android:background="@color/colorPrimaryLight"
                         android:scaleType="centerCrop"
                         android:src="@drawable/baseball" />
 
@@ -193,7 +193,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimaryLing"
+                        android:background="@color/colorPrimaryLight"
                         android:scaleType="centerCrop"
                         android:src="@drawable/chinaz12" />
 
@@ -224,7 +224,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimaryLing"
+                        android:background="@color/colorPrimaryLight"
                         android:scaleType="centerCrop"
                         android:src="@drawable/hockey" />
 
@@ -266,7 +266,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimaryLing"
+                        android:background="@color/colorPrimaryLight"
                         android:scaleType="centerCrop"
                         android:src="@drawable/volleyball" />
 
@@ -297,7 +297,7 @@
                     <ImageView
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:background="@color/colorPrimaryLing"
+                        android:background="@color/colorPrimaryLight"
                         android:scaleType="centerCrop"
                         android:src="@drawable/golf" />
 
