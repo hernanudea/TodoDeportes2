@@ -37,18 +37,21 @@
     <string name="hint_address">Dirección</string>
 
     <string-array name="arrTipos">
-        <item >Elegir Tipo 1</item>
-        <item >Elegir Tipo 2</item>
-        <item >Elegir Tipo 3</item>
+        <item>Elegir Tipo 1</item>
+        <item>Elegir Tipo 2</item>
+        <item>Elegir Tipo 3</item>
 
     </string-array>
 
     <string-array name="arrSubtipos">
-        <item >Elegir SubtipoA </item>
-        <item >Elegir SubtipoB </item>
-        <item >Elegir SubtipoC </item>
-        <item >Elegir SubtipoD </item>
+        <item>Elegir SubtipoA </item>
+        <item>Elegir SubtipoB </item>
+        <item>Elegir SubtipoC </item>
+        <item>Elegir SubtipoD </item>
     </string-array>
+
+    <!--RegistrarUsuarioActivity-->
+    <string name="title_RegistrarUsuarioActivity">Registrar Usuario</string>
 
 
 </resources>
