@@ -19,17 +19,24 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+
         <activity
-            android:name=".gui.RegistrarCanchaActivity"
-            android:label="@string/title_activity_registrar_cancha">
-        </activity>
-        <activity
-            android:name=".gui.RegistrarUsuarioActivity">
-            android:label="@string/app_name"
+            android:name=".gui.RegistrarCanchaActivity">
+            android:label="@string/title_activity_registrar_cancha"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <action android:name="android.intent.action.REGISTRARCANCHAACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".gui.RegistrarUsuarioActivity">
+            android:label="@string/title_activity_registrar_cancha"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.REGISTRARUSUARIOACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
     </application>

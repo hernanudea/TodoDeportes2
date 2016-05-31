@@ -27,7 +27,7 @@
                     android:id="@+id/imageView"
                     android:layout_width="match_parent"
                     android:layout_height="120dp"
-                    android:src="@drawable/banner_registro" />
+                    android:src="@drawable/img_banner_registro_cancha" />
 
                 <TextView
                     android:id="@+id/textView"

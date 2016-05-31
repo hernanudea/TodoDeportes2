@@ -26,14 +26,14 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-//        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-//        fab.setOnClickListener(new View.OnClickListener() {
-//            @Override
-//            public void onClick(View view) {
-//                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-//                        .setAction("Action", null).show();
-//            }
-//        });
+/*        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });*/
         fila05 = (LinearLayout) findViewById(R.id.fila05);
         fila06 = (LinearLayout) findViewById(R.id.fila06);
         toggleButton = (ToggleButton) findViewById(R.id.tbCambioperfil);
@@ -50,14 +50,14 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    @Override
+  /*  @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_main, menu);
         return true;
-    }
+    }*/
 
-    @Override
+   /* @Override
     public boolean onOptionsItemSelected(MenuItem item) {
         // Handle action bar item clicks here. The action bar will
         // automatically handle clicks on the Home/Up button, so long
@@ -70,7 +70,7 @@ public class MainActivity extends AppCompatActivity {
         }
 
         return super.onOptionsItemSelected(item);
-    }
+    }*/
 
     public void viewAdministrador() {
         fila05.setVisibility(View.VISIBLE);
@@ -86,13 +86,22 @@ public class MainActivity extends AppCompatActivity {
         Toast.makeText(getApplicationContext(), R.string.vistaUsuario, Toast.LENGTH_SHORT).show();
     }
 
+    /**
+     * Metodo que abre los activitys según la elección del usuario
+     *
+     * @param v
+     */
     public void seleccionSeccion(View v) {
-        startActivity(new Intent(this, RegistrarCanchaActivity.class));
         switch (v.getId()) {
-            case R.id.seccionCanchas:
-                Toast.makeText(getApplicationContext(), "Canchas", Toast.LENGTH_SHORT).show();
+            case R.id.imageCanchas:
+                startActivity(new Intent(this, RegistrarCanchaActivity.class));
                 break;
-
+            case R.id.imageUsuarios:
+                startActivity(new Intent(this, RegistrarUsuarioActivity.class));
+                break;
+            case R.id.registrarUsuario:
+                startActivity(new Intent(this, RegistrarUsuarioActivity.class));
+                break;
         }
     }
 }
