@@ -91,7 +91,7 @@ public class MainActivity extends AppCompatActivity {
         switch (v.getId()) {
             case R.id.seccionAdministradores:
                 Toast.makeText(getApplicationContext(), "Canchas", Toast.LENGTH_SHORT).show();
-                intent = new Intent(this, RegistrarCanchaActivity.class);
+                intent = new Intent(this, ListarCachasActivity.class);
                 break;
 
         }
