@@ -87,12 +87,14 @@ public class MainActivity extends AppCompatActivity {
     }
 
     public void seleccionSeccion(View v) {
-        startActivity(new Intent(this, RegistrarCanchaActivity.class));
+        Intent intent = null;
         switch (v.getId()) {
-            case R.id.seccionCanchas:
+            case R.id.seccionAdministradores:
                 Toast.makeText(getApplicationContext(), "Canchas", Toast.LENGTH_SHORT).show();
+                intent = new Intent(this, RegistrarCanchaActivity.class);
                 break;
 
         }
+        if (intent != null) startActivity(intent);
     }
 }
