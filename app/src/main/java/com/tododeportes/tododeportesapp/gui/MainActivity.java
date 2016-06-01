@@ -92,16 +92,17 @@ public class MainActivity extends AppCompatActivity {
      * @param v
      */
     public void seleccionSeccion(View v) {
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.imageCanchas:
-                startActivity(new Intent(this, RegistrarCanchaActivity.class));
+                intent = new Intent(this, ListarCachasActivity.class);
                 break;
             case R.id.imageUsuarios:
-                startActivity(new Intent(this, RegistrarUsuarioActivity.class));
+                intent = new Intent(this, RegistrarUsuarioActivity.class);
                 break;
             case R.id.registrarUsuario:
-                startActivity(new Intent(this, RegistrarUsuarioActivity.class));
-                break;
+                intent = new Intent(this, RegistrarUsuarioActivity.class);
         }
+        if (intent != null) startActivity(intent);
     }
 }
