@@ -9,7 +9,7 @@
     <string name="autor">by: Hernán Velásquez\nGiovani Cardona</string>
 
     <!-- ACTIVITY MAIN -->
-    <string name="iniciaSeccion">Iniciar Sección</string>
+    <string name="iniciaSeccion">Iniciar Sesión</string>
     <string name="registrarse">Registrarse</string>
     <string name="cambiaVista">Cambiar de Vista</string>
 
