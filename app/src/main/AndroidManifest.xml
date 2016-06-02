@@ -39,7 +39,13 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-        <activity android:name=".gui.ListarCachasActivity"></activity>
+
+        <activity
+            android:name=".gui.ListarCanchasActivity"
+            android:label="@string/title_activity_listar_cancha"
+            android:parentActivityName=".gui.MainActivity">
+
+        </activity>
     </application>
 
 </manifest>

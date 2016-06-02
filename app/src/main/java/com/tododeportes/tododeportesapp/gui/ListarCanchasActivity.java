@@ -13,7 +13,7 @@ import com.tododeportes.tododeportesapp.pojo.Cancha;
 
 import java.util.ArrayList;
 
-public class ListarCachasActivity extends AppCompatActivity implements ListarCanchas.ListarCanchasListener {
+public class ListarCanchasActivity extends AppCompatActivity implements ListarCanchas.ListarCanchasListener {
     private RecyclerView rvCanchas;
     private RecyclerView.Adapter mCanchasAdapter;
     private RecyclerView.LayoutManager mCanchasLayoutManager;
@@ -21,7 +21,7 @@ public class ListarCachasActivity extends AppCompatActivity implements ListarCan
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_listar_cachas);
+        setContentView(R.layout.activity_listar_canchas);
         prepareUI();
 
         new ListarCanchas(this.getApplicationContext(), this).execute();
