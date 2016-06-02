@@ -6,4 +6,5 @@ package com.tododeportes.tododeportesapp.util;
 public class UriManager {
     public static String uriWebService = "http://162.243.41.62:8080/todo-deportes/";
     public static String uriListarCanchas = "cancha/listarCanchasTodas";
+    public static String uriListarPersonas = "persona/listarPersonas";
 }

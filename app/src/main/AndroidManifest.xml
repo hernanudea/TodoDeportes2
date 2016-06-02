@@ -2,7 +2,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tododeportes.tododeportesapp">
 
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="false"
@@ -13,39 +13,39 @@
         <activity
             android:name=".gui.MainActivity"
             android:label="@string/app_name"
-            android:theme="@style/AppTheme.NoActionBar" >
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
+
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".gui.RegistrarCanchaActivity">
+        <activity android:name=".gui.RegistrarCanchaActivity">
             android:label="@string/title_activity_registrar_cancha"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.REGISTRARCANCHAACTIVITY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
-        <activity
-            android:name=".gui.RegistrarUsuarioActivity">
+        <activity android:name=".gui.RegistrarUsuarioActivity">
             android:label="@string/title_activity_registrar_cancha"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.REGISTRARUSUARIOACTIVITY" />
+
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
-
         <activity
             android:name=".gui.ListarCanchasActivity"
             android:label="@string/title_activity_listar_cancha"
-            android:parentActivityName=".gui.MainActivity">
-
-        </activity>
+            android:parentActivityName=".gui.MainActivity"></activity>
+        <activity
+            android:name=".gui.ListarPersonasActivity"
+            android:label="@string/title_activity_listar_personas"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>

@@ -60,6 +60,7 @@
     <string name="campoDireccion">Dirección</string>
     <string name="campoTelefono">Teléfono</string>
     <string name="campoEmail">Correo Electrónico</string>
+    <string name="title_activity_listar_personas">ListarPersonasActivity</string>
 
 
 </resources>
