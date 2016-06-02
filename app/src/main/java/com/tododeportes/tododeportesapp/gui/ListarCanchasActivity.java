@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.View;
+import android.widget.ProgressBar;
 
 import com.tododeportes.tododeportesapp.R;
 import com.tododeportes.tododeportesapp.comm.ListarCanchas;
@@ -17,6 +19,7 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
     private RecyclerView rvCanchas;
     private RecyclerView.Adapter mCanchasAdapter;
     private RecyclerView.LayoutManager mCanchasLayoutManager;
+    private ProgressBar pgbLoadingScenes;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,15 +33,17 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
     }
 
     private void prepareUI() {
+        rvCanchas = (RecyclerView) findViewById(R.id.rvCanchas);
+        mCanchasLayoutManager = new LinearLayoutManager(this);
+        rvCanchas.setLayoutManager(mCanchasLayoutManager);
 
-
+        pgbLoadingScenes = (ProgressBar) findViewById(R.id.pgbLoadingFields);
     }
 
     @Override
     public void onListarCanchasFinish(ArrayList<Cancha> listCanchas) {
-        rvCanchas = (RecyclerView) findViewById(R.id.rvCanchas);
-        mCanchasLayoutManager = new LinearLayoutManager(this);
-        rvCanchas.setLayoutManager(mCanchasLayoutManager);
+        rvCanchas.setVisibility(View.VISIBLE);
+        pgbLoadingScenes.setVisibility(View.GONE);
         mCanchasAdapter = new ListarCanchasAdapter(listCanchas);
         rvCanchas.setAdapter(mCanchasAdapter);
         mCanchasAdapter.notifyDataSetChanged();

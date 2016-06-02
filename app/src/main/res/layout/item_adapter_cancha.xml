@@ -5,8 +5,7 @@
     android:layout_height="wrap_content"
     android:orientation="horizontal"
     android:id="@+id/layFieldInfo"
-    android:padding="@dimen/activity_horizontal_margin"
-    android:background="@color/hint_foreground_material_dark">
+    android:padding="@dimen/activity_horizontal_margin">
 
 
     <ImageView
