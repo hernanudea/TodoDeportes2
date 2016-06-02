@@ -19,7 +19,7 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by gio on 19/08/15.
+ * Created by gio on 30/05/16.
  */
 public class ListarCanchas extends AsyncTask<Void, String, String[]> {
     private final String TAG = "ListarCanchas";
