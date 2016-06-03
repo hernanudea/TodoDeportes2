@@ -29,23 +29,31 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity android:name=".gui.RegistrarUsuarioActivity">
             android:label="@string/title_activity_registrar_cancha"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.REGISTRARUSUARIOACTIVITY" />
-
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+
         <activity
             android:name=".gui.ListarCanchasActivity"
             android:label="@string/title_activity_listar_cancha"
             android:parentActivityName=".gui.MainActivity"></activity>
+
         <activity
             android:name=".gui.ListarPersonasActivity"
             android:label="@string/title_activity_listar_personas"
-            android:theme="@style/AppTheme.NoActionBar"></activity>
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.LISTARPERSONASACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
     </application>
 
 </manifest>

@@ -13,12 +13,12 @@ public class Persona {
     private String telefonoCelular;
     private String email;
     private int ciudad;
-    private int tipoDocumento;
+    private TipoDocumento tipoDocumento;
     private String numeroDocumento;
     private String estado;
 
     public Persona(int idPersona, String nombres, String apellidos, String direccion, String telefonoFijo,
-                   String telefonoCelular, String email, int ciudad, int tipoDocumento, String numeroDocumento,
+                   String telefonoCelular, String email, int ciudad, TipoDocumento tipoDocumento, String numeroDocumento,
                    String estado) {
         this.idPersona = idPersona;
         this.nombres = nombres;
@@ -31,6 +31,14 @@ public class Persona {
         this.tipoDocumento = tipoDocumento;
         this.numeroDocumento = numeroDocumento;
         this.estado = estado;
+    }
+
+    public Persona(String nombres, String apellidos, String numeroDocumento, String direccion, String telefonoCelular) {
+        this.nombres = nombres;
+        this.apellidos = apellidos;
+        this.numeroDocumento = numeroDocumento;
+        this.direccion = direccion;
+        this.telefonoCelular = telefonoCelular;
     }
 
     public int getIdPersona() {
@@ -97,11 +105,11 @@ public class Persona {
         this.ciudad = ciudad;
     }
 
-    public int getTipoDocumento() {
+    public TipoDocumento getTipoDocumento() {
         return tipoDocumento;
     }
 
-    public void setTipoDocumento(int tipoDocumento) {
+    public void setTipoDocumento(TipoDocumento tipoDocumento) {
         this.tipoDocumento = tipoDocumento;
     }
 

@@ -11,6 +11,7 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.tododeportes.tododeportesapp.R;
+import com.tododeportes.tododeportesapp.comm.ListarPersonas;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout fila05;
@@ -96,7 +97,7 @@ public class MainActivity extends AppCompatActivity {
                 intent = new Intent(this, ListarCanchasActivity.class);
                 break;
             case R.id.imageUsuarios:
-                intent = new Intent(this, RegistrarUsuarioActivity.class);
+                intent = new Intent(this, ListarPersonasActivity.class);
                 break;
             case R.id.registrarUsuario:
                 intent = new Intent(this, RegistrarUsuarioActivity.class);

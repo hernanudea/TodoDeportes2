@@ -31,4 +31,11 @@
         android:layout_margin="@dimen/fab_margin"
         android:src="@android:drawable/ic_input_add" />
 
+    <ProgressBar
+        android:id="@+id/pgbLoadingFields"
+        style="?android:attr/progressBarStyleLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true" />
+
 </android.support.design.widget.CoordinatorLayout>
