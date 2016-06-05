@@ -9,4 +9,5 @@ public class UriManager {
     public static String uriListarPersonas = "persona/listarPersonas";
     public static String uriGetTiposDeporte = "cancha/listarTipoDeporte";
     public static String uriGetTiposEscenario = "cancha/listarTipoEscenario";
+    public static String uriGuardarCancha = "cancha/guardarCancha";
 }

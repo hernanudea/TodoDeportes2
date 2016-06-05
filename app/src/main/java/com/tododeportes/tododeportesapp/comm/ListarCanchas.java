@@ -74,7 +74,7 @@ public class ListarCanchas extends AsyncTask<Void, String, String[]> {
             return new String[]{"1", "Descarga de canchas completa"};
         } catch (Exception e) {
             Log.e(TAG, e.getLocalizedMessage());
-            return new String[]{"0", "Error en consumo de servicio GetUpdates: " + e.getLocalizedMessage()};
+            return new String[]{"0", "Error en consumo de servicio: " + e.getLocalizedMessage()};
         }
     }
 

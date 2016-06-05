@@ -14,7 +14,6 @@ import org.json.JSONObject;
 import java.util.ArrayList;
 
 import okhttp3.OkHttpClient;
-
 import okhttp3.Request;
 import okhttp3.Response;
 
@@ -76,7 +75,7 @@ public class ListarPersonas extends AsyncTask<Void, String, String[]> {
             return new String[]{"1", "Descarga de personas completa"};
         } catch (Exception e) {
             Log.e(TAG, e.getLocalizedMessage());
-            return new String[]{"0", "Error en consumo de servicio GetUpdates: " + e.getLocalizedMessage()};
+            return new String[]{"0", "Error en consumo de servicio: " + e.getLocalizedMessage()};
         }
     }
 

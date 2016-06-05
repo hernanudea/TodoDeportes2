@@ -1,11 +1,10 @@
 package com.tododeportes.tododeportesapp.gui;
 
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.tododeportes.tododeportesapp.R;
 import com.tododeportes.tododeportesapp.pojo.Usuario;

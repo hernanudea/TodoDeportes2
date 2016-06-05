@@ -1,12 +1,14 @@
 package com.tododeportes.tododeportesapp.gui;
 
 import android.content.Intent;
+import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
 
@@ -30,7 +32,7 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
         setContentView(R.layout.activity_listar_canchas);
         prepareUI();
 
-        new ListarCanchas(this.getApplicationContext(), this).execute();
+        downloadList();
 
         fabAddCancha.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -49,6 +51,12 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
         fabAddCancha = (FloatingActionButton) findViewById(R.id.fab_add_field);
     }
 
+    private void downloadList() {
+        rvCanchas.setVisibility(View.GONE);
+        pgbLoadingScenes.setVisibility(View.VISIBLE);
+        new ListarCanchas(this.getApplicationContext(), this).execute();
+    }
+
     @Override
     public void onListarCanchasFinish(ArrayList<Cancha> listCanchas) {
         rvCanchas.setVisibility(View.VISIBLE);
@@ -57,5 +65,23 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
         rvCanchas.setAdapter(mCanchasAdapter);
         mCanchasAdapter.notifyDataSetChanged();
         Log.d("ListaCanchasActivity", "Adapter OK");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        getMenuInflater().inflate(R.menu.menu_listar_cancha, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        int id = item.getItemId();
+
+        if (id == R.id.action_update_list) {
+            downloadList();
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
     }
 }

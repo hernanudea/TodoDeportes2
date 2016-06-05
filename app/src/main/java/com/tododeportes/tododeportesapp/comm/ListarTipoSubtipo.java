@@ -4,7 +4,6 @@ import android.content.Context;
 import android.os.AsyncTask;
 import android.util.Log;
 
-import com.tododeportes.tododeportesapp.pojo.Cancha;
 import com.tododeportes.tododeportesapp.pojo.TipoDeporte;
 import com.tododeportes.tododeportesapp.pojo.TipoEscenario;
 import com.tododeportes.tododeportesapp.util.UriManager;
@@ -37,13 +36,14 @@ public class ListarTipoSubtipo extends AsyncTask<Void, String, String[]> {
     protected String[] doInBackground(Void... params) {
         String result;
 
-        String strURIDeporte = UriManager.uriWebService + UriManager.uriGetTiposDeporte;
-        Log.d(TAG, strURIDeporte);
-
         OkHttpClient client = new OkHttpClient();
 
+        String strURI = UriManager.uriWebService + UriManager.uriGetTiposDeporte;
+        Log.d(TAG, strURI);
+
+
         Request request = new Request.Builder()
-                .url(strURIDeporte)
+                .url(strURI)
                 .build();
 
         try {
@@ -57,16 +57,46 @@ public class ListarTipoSubtipo extends AsyncTask<Void, String, String[]> {
             listTiposDeporte = new ArrayList<>();
 
             for (int i = 0; i < cantidad; i++) {
-                JSONObject jsonCancha = jsonTiposDeporte.getJSONObject(i);
+                JSONObject jsonTipoDeporte = jsonTiposDeporte.getJSONObject(i);
+                TipoDeporte tipoDeporte = new TipoDeporte(
+                        jsonTipoDeporte.optInt("idtipoDeporte"),
+                        jsonTipoDeporte.optString("nombre"));
 
-
-                //listTiposDeporte.add(cancha);
+                listTiposDeporte.add(tipoDeporte);
             }
+            publishProgress("1");
+
+            // Tipo de escenario
+            strURI = UriManager.uriWebService + UriManager.uriGetTiposEscenario;
+            Log.d(TAG, strURI);
+
+            request = new Request.Builder()
+                    .url(strURI)
+                    .build();
+
+            response = client.newCall(request).execute();
+            result = response.body().string();
+            Log.d(TAG, result);
+
+            JSONArray jsonTiposEscenario = new JSONArray(result);
+            cantidad = jsonTiposEscenario.length();
+
+            listTiposEscenario = new ArrayList<>();
+
+            for (int i = 0; i < cantidad; i++) {
+                JSONObject jsonTipoEscenario = jsonTiposEscenario.getJSONObject(i);
+                TipoEscenario tipoEscenario = new TipoEscenario(
+                        jsonTipoEscenario.optInt("idtipoEscenario"),
+                        jsonTipoEscenario.optString("descripcion"));
+
+                listTiposEscenario.add(tipoEscenario);
+            }
+            publishProgress("2");
 
             return new String[]{"1", "Descarga de canchas completa"};
         } catch (Exception e) {
             Log.e(TAG, e.getLocalizedMessage());
-            return new String[]{"0", "Error en consumo de servicio GetUpdates: " + e.getLocalizedMessage()};
+            return new String[]{"0", "Error en consumo de servicio: " + e.getLocalizedMessage()};
         }
     }
 

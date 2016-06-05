@@ -11,8 +11,8 @@ import android.util.Log;
 import android.view.View;
 import android.widget.ProgressBar;
 
-import com.tododeportes.tododeportesapp.comm.ListarPersonas;
 import com.tododeportes.tododeportesapp.R;
+import com.tododeportes.tododeportesapp.comm.ListarPersonas;
 import com.tododeportes.tododeportesapp.gui.adapter.ListarPersonasAdapter;
 import com.tododeportes.tododeportesapp.pojo.Persona;
 
