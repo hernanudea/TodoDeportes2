@@ -23,8 +23,10 @@
     <string name="seccionReservas">Reservas</string>
     <string name="seccionPagos">Pagos</string>
 
+    <string name="textoDireccion">Dirección: </string>
+    <string name="textoCelular">Celular: </string>
     <!--
-    <string name="XXX">XXX</string>
+
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     -->
@@ -60,7 +62,18 @@
     <string name="campoIdentificacion">Identificación</string>
     <string name="campoDireccion">Dirección</string>
     <string name="campoTelefono">Teléfono</string>
+    <string name="campoTelefonoCelular">Celular</string>
+    <string name="textBotonGuardar">Guardar</string>
+
+
     <string name="campoEmail">Correo Electrónico</string>
+    <string-array name="tipoDocumento">
+        <item>Seleccione una opción</item>
+        <item>CC - Cedula de Ciudadania</item>
+        <item>CE - Cedula de Extrangeria</item>
+        <item>TI - Tarjeta de Identidad</item>
+        <item>RC - Registro Civil</item>
+    </string-array>
 
 
     <!--IniciarSesionActivity-->
