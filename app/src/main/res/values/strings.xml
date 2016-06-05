@@ -53,7 +53,7 @@
     </string-array>
 
     <!--RegistrarUsuarioActivity-->
-    <string name="title_RegistrarUsuarioActivity">Nuevo Usuario</string>
+    <string name="title_activity_listar_personas">Personas</string>
     <string name="campoNombres">Nombres</string>
     <string name="campoApellido1">Primer Apellido</string>
     <string name="campoApellido2">Segundo Apellido</string>
@@ -61,7 +61,14 @@
     <string name="campoDireccion">Dirección</string>
     <string name="campoTelefono">Teléfono</string>
     <string name="campoEmail">Correo Electrónico</string>
-    <string name="title_activity_listar_personas">ListarPersonasActivity</string>
 
+
+    <!--IniciarSesionActivity-->
+    <string name="title_activity_iniciar">Iniciar Sesión</string>
+    <string name="textConectar">Conectar</string>
+    <string name="hintUsuario">Identificación</string>
+    <string name="hintContrasena">Contraseña</string>
+    <string name="textBotonIniciarSesion">Iniciar Sesión</string>
+    <string name="textOlvidoContrasena">¿Olvidaste tu contraseña?</string>
 
 </resources>

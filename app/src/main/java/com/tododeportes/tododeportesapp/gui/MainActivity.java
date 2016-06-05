@@ -11,7 +11,6 @@ import android.widget.Toast;
 import android.widget.ToggleButton;
 
 import com.tododeportes.tododeportesapp.R;
-import com.tododeportes.tododeportesapp.comm.ListarPersonas;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout fila05;
@@ -101,6 +100,10 @@ public class MainActivity extends AppCompatActivity {
                 break;
             case R.id.registrarUsuario:
                 intent = new Intent(this, RegistrarUsuarioActivity.class);
+                break;
+            case R.id.iniciarSeccion:
+                intent = new Intent(this, IniciarSesionActivity.class);
+                break;
         }
         if (intent != null) startActivity(intent);
     }

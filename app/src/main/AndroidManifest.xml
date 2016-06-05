@@ -20,7 +20,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".gui.RegistrarCanchaActivity"
+
+        <activity
+            android:name=".gui.RegistrarCanchaActivity"
             android:label="@string/title_activity_registrar_cancha"
             android:parentActivityName=".gui.ListarCanchasActivity">
             <intent-filter>
@@ -29,7 +31,8 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".gui.RegistrarUsuarioActivity"
+        <activity
+            android:name=".gui.RegistrarUsuarioActivity"
             android:label="@string/title_activity_registrar_usuario">
             <intent-filter>
                 <action android:name="android.intent.action.REGISTRARUSUARIOACTIVITY" />
@@ -40,14 +43,24 @@
         <activity
             android:name=".gui.ListarCanchasActivity"
             android:label="@string/title_activity_listar_cancha"
-            android:parentActivityName=".gui.MainActivity"></activity>
+            android:parentActivityName=".gui.MainActivity" />
 
         <activity
             android:name=".gui.ListarPersonasActivity"
             android:label="@string/title_activity_listar_personas"
+            android:parentActivityName=".gui.MainActivity"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.LISTARPERSONASACTIVITY" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".gui.IniciarSesionActivity">
+            android:label="@string/title_activity_listar_personas"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.INICIARSESIONACTIVITY" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
