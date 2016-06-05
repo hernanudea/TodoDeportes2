@@ -5,11 +5,11 @@
     <string name="action_settings">Configurar</string>
     <string name="saludo">Bienvenido a Todo Deportes</string>
     <string name="descripcionApp">Aquí podrás alquilar las mejores canchas!</string>
-    <string name="version">v: 0.4.4</string>
-    <string name="autor">by: Hernán Velásquez\nGiovani Cardona</string>
+    <string name="version">v: 1.0</string>
+    <string name="autor">By: \nHernán Velásquez\nGiovani Cardona</string>
 
     <!-- ACTIVITY MAIN -->
-    <string name="iniciaSeccion">Iniciar Sección</string>
+    <string name="iniciaSeccion">Iniciar Sesión</string>
     <string name="registrarse">Registrarse</string>
     <string name="cambiaVista">Cambiar de Vista</string>
 
@@ -23,13 +23,17 @@
     <string name="seccionReservas">Reservas</string>
     <string name="seccionPagos">Pagos</string>
 
+    <string name="textoDireccion">Dirección: </string>
+    <string name="textoCelular">Celular: </string>
     <!--
-    <string name="XXX">XXX</string>
+
     <string name="XXX">XXX</string>
     <string name="XXX">XXX</string>
     -->
 
     <string name="title_activity_registrar_cancha">Nueva Cancha</string>
+    <string name="title_activity_registrar_usuario">Nuevo Usuario</string>
+    <string name="title_activity_listar_cancha">Canchas</string>
     <string name="hello_world">Hello world!</string>
     <string name="nombre_cancha">Nombre de la cancha</string>
     <string name="titleRegistroCancha">Registrar Cancha</string>
@@ -50,5 +54,34 @@
         <item>Elegir SubtipoD </item>
     </string-array>
 
+    <!--RegistrarUsuarioActivity-->
+    <string name="title_activity_listar_personas">Personas</string>
+    <string name="campoNombres">Nombres</string>
+    <string name="campoApellido1">Primer Apellido</string>
+    <string name="campoApellido2">Segundo Apellido</string>
+    <string name="campoIdentificacion">Identificación</string>
+    <string name="campoDireccion">Dirección</string>
+    <string name="campoTelefono">Teléfono</string>
+    <string name="campoTelefonoCelular">Celular</string>
+    <string name="textBotonGuardar">Guardar</string>
+
+
+    <string name="campoEmail">Correo Electrónico</string>
+    <string-array name="tipoDocumento">
+        <item>Seleccione una opción</item>
+        <item>CC - Cedula de Ciudadania</item>
+        <item>CE - Cedula de Extrangeria</item>
+        <item>TI - Tarjeta de Identidad</item>
+        <item>RC - Registro Civil</item>
+    </string-array>
+
+
+    <!--IniciarSesionActivity-->
+    <string name="title_activity_iniciar">Iniciar Sesión</string>
+    <string name="textConectar">Conectar</string>
+    <string name="hintUsuario">Identificación</string>
+    <string name="hintContrasena">Contraseña</string>
+    <string name="textBotonIniciarSesion">Iniciar Sesión</string>
+    <string name="textOlvidoContrasena">¿Olvidaste tu contraseña?</string>
 
 </resources>

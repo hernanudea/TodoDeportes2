@@ -38,19 +38,18 @@
                     android:layout_height="wrap_content"
                     android:layout_centerHorizontal="true"
                     android:elevation="20dp"
+                    android:gravity="center"
                     android:text="@string/saludo"
-                    android:textAlignment="center"
                     android:textColor="@color/colorAccent"
-                    android:textSize="25dp" />
+                    android:textSize="24dp" />
 
                 <TextView
                     android:id="@+id/tvDescripcion"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_below="@+id/tvSaludo"
                     android:layout_centerHorizontal="true"
+                    android:gravity="center"
                     android:text="@string/descripcionApp"
-                    android:textAlignment="center"
                     android:textColor="@color/colorAccent"
                     android:textSize="18dp" />
             </LinearLayout>
@@ -68,22 +67,31 @@
                 android:layout_height="match_parent"
                 android:layout_below="@+id/fila02"
                 android:layout_margin="10dp"
-                android:orientation="horizontal">
+                android:orientation="horizontal"
+                android:weightSum="3">
 
                 <TextView
                     android:id="@+id/iniciarSeccion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_gravity="start"
-                    android:text="@string/iniciaSeccion" />
+                    android:layout_gravity="left"
+                    android:layout_weight="2"
+                    android:onClick="seleccionSeccion"
+                    android:text="@string/iniciaSeccion"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/registro"
+                    android:id="@+id/registrarUsuario"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="right"
+                    android:layout_weight="1"
                     android:gravity="right"
-                    android:text="@string/registrarse" />
+                    android:onClick="seleccionSeccion"
+                    android:text="@string/registrarse"
+                    android:textSize="16dp"
+                    android:textStyle="bold" />
 
 
             </LinearLayout>
@@ -112,15 +120,17 @@
                     android:id="@+id/seccionAdministradores"
                     android:layout_width="128dp"
                     android:layout_height="128dp"
-                    app:cardUseCompatPadding="true"
-                    android:onClick="seleccionSeccion">
+                    android:onClick="seleccionSeccion"
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
+                        android:id="@+id/imageCanchas"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimaryLight"
+                        android:onClick="seleccionSeccion"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/football" />
+                        android:src="@drawable/img_seccion_canchas" />
 
                     <TextView
                         android:id="@+id/seccionCanchas"
@@ -142,16 +152,18 @@
                     android:id="@+id/SeccionSubtipoCancha"
                     android:layout_width="128dp"
                     android:layout_height="128dp"
+                    android:onClick="seleccionSeccion"
                     android:padding="10dp"
-                    app:cardUseCompatPadding="true"
-                    android:onClick="seleccionSeccion">
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
+                        android:id="@+id/imageSubtipoCancha"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimaryLight"
+                        android:onClick="seleccionSeccion"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/baseball" />
+                        android:src="@drawable/img_seccion_subtipo" />
 
                     <TextView
                         android:id="@+id/seccionTipoCancha"
@@ -186,16 +198,18 @@
                     android:id="@+id/seccionBusqueda"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
+                    android:onClick="seleccionSeccion"
                     android:padding="10dp"
-                    app:cardUseCompatPadding="true"
-                    android:onClick="seleccionSeccion">
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
+                        android:id="@+id/imageBusqueda"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimaryLight"
+                        android:onClick="seleccionSeccion"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/chinaz12" />
+                        android:src="@drawable/img_seccion_busquedas" />
 
                     <TextView
                         android:id="@+id/busquedas"
@@ -217,16 +231,18 @@
                     android:id="@+id/card2"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
+                    android:onClick="seleccionSeccion"
                     android:padding="10dp"
-                    app:cardUseCompatPadding="true"
-                    android:onClick="seleccionSeccion">
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
+                        android:id="@+id/imageUsuarios"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimaryLight"
+                        android:onClick="seleccionSeccion"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/hockey" />
+                        android:src="@drawable/img_seccion_usuarios" />
 
                     <TextView
                         android:id="@+id/seccionUsuarios"
@@ -259,16 +275,18 @@
                     android:id="@+id/seccionReservas"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
+                    android:onClick="seleccionSeccion"
                     android:padding="10dp"
-                    app:cardUseCompatPadding="true"
-                    android:onClick="seleccionSeccion">
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
+                        android:id="@+id/imageReservas"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimaryLight"
+                        android:onClick="seleccionSeccion"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/volleyball" />
+                        android:src="@drawable/img_seccion_reservas" />
 
                     <TextView
                         android:id="@+id/reservas"
@@ -290,16 +308,18 @@
                     android:id="@+id/SeccionPagos"
                     android:layout_width="150dp"
                     android:layout_height="150dp"
+                    android:onClick="seleccionSeccion"
                     android:padding="10dp"
-                    app:cardUseCompatPadding="true"
-                    android:onClick="seleccionSeccion">
+                    app:cardUseCompatPadding="true">
 
                     <ImageView
+                        android:id="@+id/imagePagos"
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
                         android:background="@color/colorPrimaryLight"
+                        android:onClick="seleccionSeccion"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/golf" />
+                        android:src="@drawable/img_seccion_pagos" />
 
                     <TextView
                         android:id="@+id/tvPagos"
@@ -329,8 +349,8 @@
                 android:id="@+id/fila09"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_below="@+id/fila08"
+                android:layout_margin="10dp"
                 android:gravity="center"
                 android:orientation="vertical">
 
@@ -360,8 +380,8 @@
                 android:id="@+id/fila11"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
                 android:layout_below="@+id/fila10"
+                android:layout_margin="10dp"
                 android:orientation="vertical">
 
                 <TextView

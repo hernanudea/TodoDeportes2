@@ -19,15 +19,15 @@ import okhttp3.Request;
 import okhttp3.Response;
 
 /**
- * Created by gio on 30/05/16.
+ * Created by gio on 04/06/16.
  */
-public class ListarCanchas extends AsyncTask<Void, String, String[]> {
+public class RegistrarCancha extends AsyncTask<Void, String, String[]> {
     private final String TAG = "ListarCanchas";
     private Context mContext;
     private ListarCanchasListener mListener;
     ArrayList<Cancha> listCanchas;
 
-    public ListarCanchas(Context context, ListarCanchasListener listener) {
+    public RegistrarCancha(Context context, ListarCanchasListener listener) {
         this.mContext = context;
         this.mListener = listener;
     }
