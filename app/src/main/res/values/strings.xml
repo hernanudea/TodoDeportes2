@@ -5,8 +5,8 @@
     <string name="action_settings">Configurar</string>
     <string name="saludo">Bienvenido a Todo Deportes</string>
     <string name="descripcionApp">Aquí podrás alquilar las mejores canchas!</string>
-    <string name="version">v: 0.4.4</string>
-    <string name="autor">by: Hernán Velásquez\nGiovani Cardona</string>
+    <string name="version">v: 1.0</string>
+    <string name="autor">By: \nHernán Velásquez\nGiovani Cardona</string>
 
     <!-- ACTIVITY MAIN -->
     <string name="iniciaSeccion">Iniciar Sesión</string>

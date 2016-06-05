@@ -9,9 +9,14 @@ import android.widget.ArrayAdapter;
 import android.widget.Spinner;
 
 import com.tododeportes.tododeportesapp.R;
+import com.tododeportes.tododeportesapp.comm.ListarTipoSubtipo;
+import com.tododeportes.tododeportesapp.pojo.TipoDeporte;
+import com.tododeportes.tododeportesapp.pojo.TipoEscenario;
+
+import java.util.ArrayList;
 
 
-public class RegistrarCanchaActivity extends AppCompatActivity {
+public class RegistrarCanchaActivity extends AppCompatActivity implements ListarTipoSubtipo.GetTipoSubtipoListener  {
     private Spinner spnTipo;
     private Spinner spnSubtipo;
 
@@ -21,17 +26,7 @@ public class RegistrarCanchaActivity extends AppCompatActivity {
         setContentView(R.layout.activity_registrar_cancha);
         prepareUI();
 
-        // TIPO
-        ArrayAdapter<CharSequence> adapterTipos = ArrayAdapter.createFromResource(this,
-                R.array.arrTipos, android.R.layout.simple_spinner_item);
-        adapterTipos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnTipo.setAdapter(adapterTipos);
-
-        // SUBTIPO
-        ArrayAdapter<CharSequence> adapterSubtipos = ArrayAdapter.createFromResource(this,
-                R.array.arrSubtipos, android.R.layout.simple_spinner_item);
-        adapterSubtipos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        spnSubtipo.setAdapter(adapterSubtipos);
+        new ListarTipoSubtipo(this, this).execute();
     }
 
     private void prepareUI() {
@@ -41,23 +36,34 @@ public class RegistrarCanchaActivity extends AppCompatActivity {
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_registrar_cancha, menu);
         return true;
     }
 
     @Override
     public boolean onOptionsItemSelected(MenuItem item) {
-        // Handle action bar item clicks here. The action bar will
-        // automatically handle clicks on the Home/Up button, so long
-        // as you specify a parent activity in AndroidManifest.xml.
         int id = item.getItemId();
 
-        //noinspection SimplifiableIfStatement
         if (id == R.id.action_settings) {
             return true;
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public void onTiposListed(ArrayList<TipoDeporte> listTiposDeporte) {
+        ArrayAdapter<CharSequence> adapterTipos = ArrayAdapter.createFromResource(this,
+                R.array.arrTipos, android.R.layout.simple_spinner_item);
+        adapterTipos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnTipo.setAdapter(adapterTipos);
+    }
+
+    @Override
+    public void onSubtiposListed(ArrayList<TipoEscenario> listTiposEscenario) {
+        ArrayAdapter<CharSequence> adapterSubtipos = ArrayAdapter.createFromResource(this,
+                R.array.arrSubtipos, android.R.layout.simple_spinner_item);
+        adapterSubtipos.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        spnSubtipo.setAdapter(adapterSubtipos);
     }
 }
