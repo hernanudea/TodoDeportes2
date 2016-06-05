@@ -19,9 +19,7 @@ public class RegistrarCanchaActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_registrar_cancha);
-
-        spnTipo = (Spinner) findViewById(R.id.spnTipo);
-        spnSubtipo = (Spinner) findViewById(R.id.spnSubtipo);
+        prepareUI();
 
         // TIPO
         ArrayAdapter<CharSequence> adapterTipos = ArrayAdapter.createFromResource(this,
@@ -36,6 +34,10 @@ public class RegistrarCanchaActivity extends AppCompatActivity {
         spnSubtipo.setAdapter(adapterSubtipos);
     }
 
+    private void prepareUI() {
+        spnTipo = (Spinner) findViewById(R.id.spnTipo);
+        spnSubtipo = (Spinner) findViewById(R.id.spnSubtipo);
+    }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {

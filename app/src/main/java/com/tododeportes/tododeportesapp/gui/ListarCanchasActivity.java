@@ -1,5 +1,7 @@
 package com.tododeportes.tododeportesapp.gui;
 
+import android.content.Intent;
+import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.LinearLayoutManager;
@@ -20,6 +22,7 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
     private RecyclerView.Adapter mCanchasAdapter;
     private RecyclerView.LayoutManager mCanchasLayoutManager;
     private ProgressBar pgbLoadingScenes;
+    private FloatingActionButton fabAddCancha;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,15 +32,21 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
 
         new ListarCanchas(this.getApplicationContext(), this).execute();
 
-
+        fabAddCancha.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent i = new Intent(ListarCanchasActivity.this, RegistrarCanchaActivity.class);
+                startActivity(i);
+            }
+        });
     }
 
     private void prepareUI() {
         rvCanchas = (RecyclerView) findViewById(R.id.rvCanchas);
         mCanchasLayoutManager = new LinearLayoutManager(this);
         rvCanchas.setLayoutManager(mCanchasLayoutManager);
-
         pgbLoadingScenes = (ProgressBar) findViewById(R.id.pgbLoadingFields);
+        fabAddCancha = (FloatingActionButton) findViewById(R.id.fab_add_field);
     }
 
     @Override

@@ -29,15 +29,6 @@
                     android:layout_height="120dp"
                     android:src="@drawable/img_banner_registro_cancha" />
 
-                <TextView
-                    android:id="@+id/textView"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_gravity="center_horizontal"
-                    android:layout_marginBottom="15dp"
-                    android:text="@string/titleRegistroCancha"
-                    android:textAppearance="?android:attr/textAppearanceLarge" />
-
                 <EditText
                     android:id="@+id/editText"
                     android:layout_width="wrap_content"
