@@ -2,6 +2,18 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     tools:context="com.tododeportes.tododeportesapp.gui.RegistrarCanchaActivity">
-    <item android:id="@+id/action_update_list" android:title="@string/update_canchas"
-        android:orderInCategory="100" app:showAsAction="always|withText" android:icon="@drawable/ic_update_white"/>
+
+    <item android:id="@+id/action_search_cancha"
+        android:title="@string/search_cancha"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText"
+        android:icon="@drawable/ic_search_white"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+    />
+
+    <item android:id="@+id/action_update_list"
+        android:title="@string/update_canchas"
+        android:orderInCategory="100"
+        app:showAsAction="always|withText"
+        android:icon="@drawable/ic_update_white"/>
 </menu>

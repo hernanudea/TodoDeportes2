@@ -39,6 +39,7 @@
     <string name="titleRegistroCancha">Registrar Cancha</string>
     <string name="saveCancha">Guardar</string>
     <string name="update_canchas">Actualizar</string>
+    <string name="search_cancha">Buscar</string>
     <string name="hint_address">Dirección</string>
 
     <string-array name="arrTipos">

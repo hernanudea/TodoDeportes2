@@ -43,7 +43,17 @@
         <activity
             android:name=".gui.ListarCanchasActivity"
             android:label="@string/title_activity_listar_cancha"
-            android:parentActivityName=".gui.MainActivity" />
+            android:parentActivityName=".gui.MainActivity"
+            android:launchMode="singleTop" >
+
+            <intent-filter>
+                <action android:name="android.intent.action.SEARCH" />
+            </intent-filter>
+            <meta-data android:name="android.app.searchable"
+                android:resource="@xml/searchable_canchas"/>
+            <meta-data android:name="android.app.default_searchable"
+                android:value=".gui.ListarCanchasActivity" />
+        </activity>
 
         <activity
             android:name=".gui.ListarPersonasActivity"

@@ -16,8 +16,7 @@ import java.util.ArrayList;
 /**
  * Created by Giovani Cardona on 31/05/16.
  */
-public class ListarCanchasAdapter extends RecyclerView.Adapter<ListarCanchasAdapter.ViewHolder> {
-    private ArrayList<Cancha> listCanchas;
+public class ListarCanchasAdapter extends AnimatedAdapter<ListarCanchasAdapter.ViewHolder, Cancha>  {
 
     public static class ViewHolder extends RecyclerView.ViewHolder {
         public TextView txtFieldName;
@@ -31,7 +30,7 @@ public class ListarCanchasAdapter extends RecyclerView.Adapter<ListarCanchasAdap
     }
 
     public ListarCanchasAdapter(ArrayList<Cancha> listCanchas) {
-        this.listCanchas = listCanchas;
+        this.array = new ArrayList<>(listCanchas);
     }
 
     @Override
@@ -49,7 +48,7 @@ public class ListarCanchasAdapter extends RecyclerView.Adapter<ListarCanchasAdap
 
     @Override
     public void onBindViewHolder(ViewHolder holder, int position) {
-        Cancha cancha = listCanchas.get(position);
+        Cancha cancha = array.get(position);
         holder.txtFieldName.setText(cancha.getDescripcion());
         holder.txtSport.setText(cancha.getTipoDeporte().getDescripcion());
         holder.txtFloorType.setText(cancha.getTipoEscenario().getDescripcion());
@@ -67,12 +66,10 @@ public class ListarCanchasAdapter extends RecyclerView.Adapter<ListarCanchasAdap
                 break;
             case 5:
                 holder.imgSportIcon.setImageResource(R.drawable.volleyball_ball);
+                break;
+            case 6:
+                holder.imgSportIcon.setImageResource(R.drawable.tejo);
         }
-    }
-
-    @Override
-    public int getItemCount() {
-        return listCanchas.size();
     }
 }
 

@@ -1,16 +1,20 @@
 package com.tododeportes.tododeportesapp.gui;
 
+import android.app.SearchManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
+import android.support.v7.widget.SearchView;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.ProgressBar;
+import android.widget.Toast;
 
 import com.tododeportes.tododeportesapp.R;
 import com.tododeportes.tododeportesapp.comm.ListarCanchas;
@@ -19,12 +23,16 @@ import com.tododeportes.tododeportesapp.pojo.Cancha;
 
 import java.util.ArrayList;
 
-public class ListarCanchasActivity extends AppCompatActivity implements ListarCanchas.ListarCanchasListener {
+public class ListarCanchasActivity extends AppCompatActivity implements
+        ListarCanchas.ListarCanchasListener,
+        SearchView.OnQueryTextListener {
+
     private RecyclerView rvCanchas;
-    private RecyclerView.Adapter mCanchasAdapter;
+    private ListarCanchasAdapter mCanchasAdapter;
     private RecyclerView.LayoutManager mCanchasLayoutManager;
     private ProgressBar pgbLoadingScenes;
     private FloatingActionButton fabAddCancha;
+    private ArrayList<Cancha> listCanchas;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -34,6 +42,8 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
 
         downloadList();
 
+
+
         fabAddCancha.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -41,6 +51,8 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
                 startActivity(i);
             }
         });
+
+
     }
 
     private void prepareUI() {
@@ -59,17 +71,33 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
 
     @Override
     public void onListarCanchasFinish(ArrayList<Cancha> listCanchas) {
+        this.listCanchas = listCanchas;
         rvCanchas.setVisibility(View.VISIBLE);
         pgbLoadingScenes.setVisibility(View.GONE);
         mCanchasAdapter = new ListarCanchasAdapter(listCanchas);
         rvCanchas.setAdapter(mCanchasAdapter);
         mCanchasAdapter.notifyDataSetChanged();
         Log.d("ListaCanchasActivity", "Adapter OK");
+        handleIntent(getIntent());
+    }
+
+    @Override
+    protected void onNewIntent(Intent intent) {
+        handleIntent(intent);
+    }
+
+    private void handleIntent(Intent intent) {
+        if (Intent.ACTION_SEARCH.equals(intent.getAction())) {
+            Toast.makeText(this, "onNewIntent", Toast.LENGTH_LONG).show();
+        }
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         getMenuInflater().inflate(R.menu.menu_listar_cancha, menu);
+        final MenuItem item = menu.findItem(R.id.action_search_cancha);
+        final SearchView searchView = (SearchView) MenuItemCompat.getActionView(item);
+        searchView.setOnQueryTextListener(this);
         return true;
     }
 
@@ -82,6 +110,33 @@ public class ListarCanchasActivity extends AppCompatActivity implements ListarCa
             return true;
         }
 
+
         return super.onOptionsItemSelected(item);
+    }
+
+    @Override
+    public boolean onQueryTextSubmit(String query) {
+        return false;
+    }
+
+    @Override
+    public boolean onQueryTextChange(String newText) {
+        final ArrayList<Cancha> filteredCanchaList = filter(listCanchas, newText);
+        mCanchasAdapter.animateTo(filteredCanchaList);
+        rvCanchas.scrollToPosition(0);
+        return false;
+    }
+
+    private ArrayList<Cancha> filter(ArrayList<Cancha> list, String query) {
+        query = query.toLowerCase();
+
+        final ArrayList<Cancha> filteredCanchaList = new ArrayList<>();
+        for (Cancha cancha : list) {
+            final String text = cancha.getDescripcion().toLowerCase();
+            if (text.contains(query)) {
+                filteredCanchaList.add(cancha);
+            }
+        }
+        return filteredCanchaList;
     }
 }
